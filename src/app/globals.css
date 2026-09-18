@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #073f8c;
+  --muted: #647286;
+  --stone: #f1f5fb;
+  --paper: #ffffff;
+  --clay: #ed1c24;
+  --clay-dark: #bd1017;
+  --sage: #0b55a5;
+  --line: #d8e1ed;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-stone: var(--stone);
+  --color-paper: var(--paper);
+  --color-clay: var(--clay);
+  --color-clay-dark: var(--clay-dark);
+  --color-sage: var(--sage);
+  --color-line: var(--line);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+}
+button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+button, a { touch-action: manipulation; }
+.font-display { font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif; }
+.eyebrow { letter-spacing: .18em; text-transform: uppercase; font-size: .72rem; font-weight: 700; }
+.page-shell { width: min(1240px, calc(100% - 40px)); margin-inline: auto; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { scrollbar-width: none; }
+::selection { background: #ffd400; color: #073f8c; }
+
+@media (max-width: 640px) {
+  .page-shell { width: min(100% - 28px, 1240px); }
+}
